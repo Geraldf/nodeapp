@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1 Konfiguration
+  form(method='POST' action='/config')
+    div.form-group
+      label(for='host') Camunda Host:
+      input#host.form-control(type='text', value=conf.camunda.host, placeholder='localhost oder IP adresse' name='host')
+    button.btn.btn-primary(type='submit') Speichern
+    
+  
+
