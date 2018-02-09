@@ -2,6 +2,13 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  -var ob = JSON.parse(pList)
+  .row
+    each val in ob
+      .col-md-4.col-sm-6.col-xs-12
+        +panel(val.name,"default") We are a fairly small, flexible design studio that designs for print and web. We work flexibly with clients to fulfil their design needs. Whether you need to create a brand from scratch, including marketing materials and a beautiful and functional website or whether you are looking for a design refresh we are confident you will be pleased with the results.
+
+
+
   
 
